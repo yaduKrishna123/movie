@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <input type="text" name="name" placeholder="enter the movie name"><br>
+
+   <input type="text" name="dec" placeholder="enter the movie decesprition"><br>
+   <input type="number" name="year" placeholder="enter the movie year"><br>
+    <input type="file" name="img"><br>
+<input type="submit">
+</form>
+
+<style>
+
+  body {
+  background-image:url("https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2022/05/online_pasted-image-0.jpg?fit=1200%2C800&ssl=1");
+   background-repeat: no-repeat;
+   background-size:cover;
+}
+form {
+  text-align:center;
+  font-size:36px;
+  algin-items:center;
+  margin-top: 290px;
+  margin-left: 120px;
+  letter-spacing: 1px;
+  }
+  input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+</style>
+{% endblock %}
